@@ -3,45 +3,37 @@ using UnityEngine;
 
 public class CatalogueManager : MonoBehaviour
 {
+    [Header("Panels")]
+    [SerializeField] private GameObject catalogPanel;          
+    [SerializeField] private GameObject stickerInventoryPanel; 
+
     [Header("Data & Prefabs")]
     [SerializeField] private List<GameDataSO> allGames;
     [SerializeField] private GameObject gameEntryPrefab;
-    [SerializeField] private Transform gridContainer; 
+    [SerializeField] private Transform gridContainer;
 
-    private List<GameObject> spawnedEntries = new List<GameObject>();
+    [Header("External Managers")]
+    [SerializeField] private StickerCollectionManager stickerManager; 
 
-    private void Start()
+    public void OpenStickerInventoryForGame(GameDataSO selectedGame)
     {
-       
-        FilterByGenre((int)GameGenre.Acción);
-    }
+        
+        if (catalogPanel != null) catalogPanel.SetActive(false);
 
-    public void FilterByGenre(int genreIndex)
-    {
-        GameGenre selectedGenre = (GameGenre)genreIndex;
-        ClearGrid();
+        
+        if (stickerInventoryPanel != null) stickerInventoryPanel.SetActive(true);
 
-        foreach (GameDataSO game in allGames)
+        
+        if (stickerManager != null)
         {
-            if (game.genre == selectedGenre)
-            {
-                GameObject newEntry = Instantiate(gameEntryPrefab, gridContainer);
-                GameEntryUI entryScript = newEntry.GetComponent<GameEntryUI>();
-                if (entryScript != null)
-                {
-                    entryScript.Setup(game);
-                }
-                spawnedEntries.Add(newEntry);
-            }
+            
         }
     }
 
-    private void ClearGrid()
+    
+    public void BackToCatalog()
     {
-        foreach (GameObject entry in spawnedEntries)
-        {
-            Destroy(entry);
-        }
-        spawnedEntries.Clear();
+        if (stickerInventoryPanel != null) stickerInventoryPanel.SetActive(false);
+        if (catalogPanel != null) catalogPanel.SetActive(true);
     }
 }

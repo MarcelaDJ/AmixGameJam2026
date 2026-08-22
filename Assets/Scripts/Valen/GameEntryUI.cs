@@ -7,22 +7,32 @@ public class GameEntryUI : MonoBehaviour
     [Header("UI Elements")]
     [SerializeField] private Image gameIcon;
     [SerializeField] private TextMeshProUGUI titleText;
-    [SerializeField] private GameObject lockedOverlay;
-    [SerializeField] private TextMeshProUGUI lockedText;
+    [SerializeField] private Button selectButton;
 
-    public void Setup(GameDataSO data)
+    private GameDataSO currentGameData;
+    private CatalogueManager manager;
+
+    public void Setup(GameDataSO data, CatalogueManager catalogueManager)
     {
-        if (data.isUnlocked)
+        currentGameData = data;
+        manager = catalogueManager;
+
+        if (titleText != null) titleText.text = data.gameTitle;
+        if (gameIcon != null && data.icon != null) gameIcon.sprite = data.icon;
+
+        
+        if (selectButton != null)
         {
-            if (gameIcon != null) gameIcon.sprite = data.icon;
-            if (titleText != null) titleText.text = data.gameTitle;
-            if (lockedOverlay != null) lockedOverlay.SetActive(false);
+            selectButton.onClick.RemoveAllListeners();
+            selectButton.onClick.AddListener(OnGameSelected);
         }
-        else
+    }
+
+    private void OnGameSelected()
+    {
+        if (manager != null && currentGameData != null)
         {
-            if (titleText != null) titleText.text = "???";
-            if (lockedOverlay != null) lockedOverlay.SetActive(true);
-            if (lockedText != null) lockedText.text = "Bloqueado";
+            manager.OpenStickerInventoryForGame(currentGameData);
         }
     }
 }
