@@ -3,26 +3,28 @@ using UnityEngine;
 public class CatalogNavigation : MonoBehaviour
 {
     [Header("UI Panels")]
-    [SerializeField] private GameObject gamesCatalogPanel; 
-    [SerializeField] private GameObject stickersPanel;    
+    [SerializeField] private GameObject gamesCatalogPanel;  
+    [SerializeField] private GameObject stickerInventoryPanel; 
+    [SerializeField] private GameObject invButton;           
+
    
-    public void OpenStickersPanel()
+    public void OpenGamesCatalog()
     {
-        if (gamesCatalogPanel != null) gamesCatalogPanel.SetActive(false);
-        if (stickersPanel != null) stickersPanel.SetActive(true);
-    }
-
-
-    public void CloseCatalogToGame()
-    {
-        if (gamesCatalogPanel != null) gamesCatalogPanel.SetActive(false);
-        if (stickersPanel != null) stickersPanel.SetActive(false);
+        if (gamesCatalogPanel != null) gamesCatalogPanel.SetActive(true);
+        if (stickerInventoryPanel != null) stickerInventoryPanel.SetActive(false);
     }
 
     
-    public void OpenGamesCatalog()
+    public void CloseAllPanels()
     {
-        if (stickersPanel != null) stickersPanel.SetActive(false);
-        if (gamesCatalogPanel != null) gamesCatalogPanel.SetActive(true);
+        if (gamesCatalogPanel != null) gamesCatalogPanel.SetActive(false);
+        if (stickerInventoryPanel != null) stickerInventoryPanel.SetActive(false);
+    }
+
+    
+    public void SelectGameAndOpenStickers()
+    {
+        if (gamesCatalogPanel != null) gamesCatalogPanel.SetActive(false);
+        if (stickerInventoryPanel != null) stickerInventoryPanel.SetActive(true);
     }
 }
