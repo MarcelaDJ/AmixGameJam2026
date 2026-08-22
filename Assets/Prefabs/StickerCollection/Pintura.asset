@@ -16,4 +16,4 @@ MonoBehaviour:
   displayName: Pintura
   icon: {fileID: 21300000, guid: 9d5fd84d10a30094b8989089a31a04c3, type: 3}
   points: 1
-  categories: 0
+  categories: -1

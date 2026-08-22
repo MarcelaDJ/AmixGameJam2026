@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,7 @@ public class StickerSlotUI : MonoBehaviour
     [Header("Referencias del prefab")]
     [SerializeField] private Image iconImage;
     [SerializeField] private Button button;
+    [SerializeField] private TextMeshProUGUI countText;
 
     private StickerSlot boundSlot;
     private System.Action<StickerSlot> onClicked;
@@ -34,6 +36,13 @@ public class StickerSlotUI : MonoBehaviour
 
         iconImage.enabled = !isEmpty;
         iconImage.sprite = isEmpty ? null : slot.data.icon;
+
+        if (countText != null)
+        {
+            bool showCount = !isEmpty && slot.count > 1;
+            countText.enabled = showCount;
+            countText.text = showCount ? $"x{slot.count}" : string.Empty;
+        }
     }
 
     private void HandleClick()

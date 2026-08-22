@@ -15,5 +15,5 @@ MonoBehaviour:
   stickerId: 2
   displayName: Alien
   icon: {fileID: 21300000, guid: 0639efc7c5e79ca429b4e62b7ba57e4d, type: 3}
-  points: 0
-  categories: 0
+  points: 1
+  categories: 20
