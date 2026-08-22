@@ -2,11 +2,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-/// <summary>
 /// Representa visualmente un único slot dentro de la grilla del álbum.
 /// Va en el prefab del casillero (fondo + ícono).
 /// No sabe nada de la colección completa, solo cómo pintarse a sí mismo.
-/// </summary>
 public class StickerSlotUI : MonoBehaviour
 {
     [Header("Referencias del prefab")]
@@ -23,10 +21,9 @@ public class StickerSlotUI : MonoBehaviour
             button.onClick.AddListener(HandleClick);
     }
 
-    /// <summary>
     /// Configura este slot visual con los datos de un StickerSlot real.
     /// Si el slot está vacío, se muestra sin ícono (casillero vacío).
-    /// </summary>
+ 
     public void Setup(StickerSlot slot, System.Action<StickerSlot> onClickedCallback)
     {
         boundSlot = slot;

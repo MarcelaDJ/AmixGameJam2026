@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
+
 /// Una entrada posible dentro de un sobre: qué sticker es y qué probabilidad
 /// relativa tiene de salir (a mayor weight, más chances).
-/// </summary>
+
 [System.Serializable]
 public class StickerPackEntry
 {
@@ -15,10 +15,10 @@ public class StickerPackEntry
     public float weight = 1f;
 }
 
-/// <summary>
+
 /// Define un tipo de sobre: cuántos stickers trae y de qué pool posible
 /// se sortean. Se crea como asset desde Assets > Create > Stickers > Sticker Pack.
-/// </summary>
+
 [CreateAssetMenu(fileName = "NewPack", menuName = "Stickers/Sticker Pack")]
 public class StickerPack : ScriptableObject
 {

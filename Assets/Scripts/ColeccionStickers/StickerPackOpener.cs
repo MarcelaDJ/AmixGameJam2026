@@ -2,11 +2,10 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-/// <summary>
 /// Vive en la escena. Se encarga de abrir un StickerPack: sortea los
 /// stickers según su probabilidad y los agrega inmediatamente a la
 /// colección del jugador (se "pegan" directo al cuaderno).
-/// </summary>
+
 public class StickerPackOpener : MonoBehaviour
 {
     [Tooltip("Referencia al manager de la colección del jugador")]
@@ -15,11 +14,10 @@ public class StickerPackOpener : MonoBehaviour
     [Header("Prueba rápida en el Inspector")]
     [SerializeField] private StickerPack testPack;
 
-    /// <summary>
     /// Abre un sobre: sortea 'stickersPerPack' stickers según su probabilidad
     /// y los agrega a la colección. Devuelve la lista de resultados, útil
     /// para mostrar una animación de "revelado" en la UI.
-    /// </summary>
+  
     public List<StickerData> OpenPack(StickerPack pack)
     {
         var results = new List<StickerData>();
@@ -40,7 +38,7 @@ public class StickerPackOpener : MonoBehaviour
         return results;
     }
 
-    /// <summary>Sortea un sticker respetando los pesos (weight) de cada entrada.</summary>
+    /// Sortea un sticker respetando los pesos (weight) de cada entrada.
     private StickerData PickWeightedRandom(List<StickerPackEntry> entries)
     {
         float totalWeight = entries.Sum(e => e.weight);
@@ -58,7 +56,7 @@ public class StickerPackOpener : MonoBehaviour
         return entries[entries.Count - 1].sticker;
     }
 
-    // --- Solo para probar rápido desde el Inspector con clic derecho ---
+    // --- Solo para probar desde el Inspector con clic derecho ---
     [ContextMenu("Abrir sobre de prueba")]
     private void AbrirSobreDePruebaDesdeInspector()
     {

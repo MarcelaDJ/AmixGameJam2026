@@ -1,9 +1,9 @@
 using UnityEngine;
 
-/// <summary>
+
 /// Possible sticker categories. [Flags] allows a sticker to belong
 /// to several categories at once (e.g. Animals | Space).
-/// </summary>
+
 [System.Flags]
 public enum StickerCategory
 {
@@ -15,11 +15,11 @@ public enum StickerCategory
     Fantasy = 1 << 4
 }
 
-/// <summary>
+
 /// Fixed definition of a sticker. Created as an asset via
 /// Assets > Create > Stickers > Sticker Data.
 /// Does not change at runtime: it's the "catalog", not the player's progress.
-/// </summary>
+
 [CreateAssetMenu(fileName = "NewSticker", menuName = "Stickers/Sticker Data")]
 public class StickerData : ScriptableObject
 {
@@ -34,7 +34,7 @@ public class StickerData : ScriptableObject
     [Header("Categories (multi-select)")]
     public StickerCategory categories;
 
-    /// <summary>Checks whether this sticker belongs to a given category.</summary>
+    /// Checks whether this sticker belongs to a given category.
     public bool HasCategory(StickerCategory category)
     {
         return (categories & category) != 0;

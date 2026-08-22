@@ -2,12 +2,11 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
 /// A board (e.g. a sheet of paper) where stickers from the collection
 /// can be stuck at ANY position — free placement, not fixed slots.
 /// Placing a sticker here reserves one unit from the collection;
 /// removing it releases that unit back.
-/// </summary>
+
 public class StickerBoard : MonoBehaviour
 {
     [Tooltip("Reference to the player's sticker collection (ownership source of truth)")]
@@ -17,10 +16,10 @@ public class StickerBoard : MonoBehaviour
 
     public Action OnBoardChanged;
 
-    /// <summary>
+   
     /// Places a sticker freely at the given position. Fails if the
     /// collection has no available copies of that sticker.
-    /// </summary>
+  
     public StickerPlacement PlaceSticker(StickerData sticker, Vector2 position, float rotation = 0f)
     {
         if (sticker == null) return null;
@@ -38,7 +37,7 @@ public class StickerBoard : MonoBehaviour
         return placement;
     }
 
-    /// <summary>Removes a placed sticker from the board and returns it to the collection.</summary>
+    /// Removes a placed sticker from the board and returns it to the collection.
     public bool RemoveSticker(StickerPlacement placement)
     {
         if (placement == null || !placements.Remove(placement)) return false;
@@ -48,7 +47,7 @@ public class StickerBoard : MonoBehaviour
         return true;
     }
 
-    /// <summary>Moves an already-placed sticker to a new position/rotation (e.g. dragging).</summary>
+    /// Moves an already-placed sticker to a new position/rotation (e.g. dragging)
     public bool MoveSticker(StickerPlacement placement, Vector2 newPosition, float newRotation)
     {
         if (placement == null || !placements.Contains(placement)) return false;
