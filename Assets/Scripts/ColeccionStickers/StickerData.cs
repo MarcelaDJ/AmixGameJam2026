@@ -8,11 +8,30 @@ using UnityEngine;
 public enum StickerCategory
 {
     None = 0,
-    Animals = 1 << 0,
-    Nature = 1 << 1,
-    Space = 1 << 2,
-    Retro = 1 << 3,
-    Fantasy = 1 << 4
+    Accion = 1 << 0,
+    Animales = 1 << 1,
+    Armas = 1 << 2,
+    Color = 1 << 3,
+    Combate = 1 << 4,
+    Comida = 1 << 5,
+    Construccion = 1 << 6,
+    Emocional = 1 << 7,
+    Espacio = 1 << 8,
+    Estrategia = 1 << 9,
+    Exploracion = 1 << 10,
+    Fantasia = 1 << 11,
+    Gestion = 1 << 12,
+    Magia = 1 << 13,
+    Mitologia = 1 << 14,
+    Naturaleza = 1 << 15,
+    Plataformas = 1 << 16,
+    Poder = 1 << 17,
+    Mecanica = 1 << 18,
+    SciFi = 1 << 19,
+    Supervivencia = 1 << 20,
+    Vehiculos = 1 << 21,
+    Velocidad = 1 << 22,
+    VidaCotidiana = 1 << 23
 }
 
 

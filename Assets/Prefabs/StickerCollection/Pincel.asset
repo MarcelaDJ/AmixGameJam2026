@@ -16,4 +16,4 @@ MonoBehaviour:
   displayName: Pincel
   icon: {fileID: 21300000, guid: 8909745dee1b5164f99dd6a55070b030, type: 3}
   points: 1
-  categories: -1
+  categories: 1096
