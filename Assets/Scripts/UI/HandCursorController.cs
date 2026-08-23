@@ -1,11 +1,11 @@
 using UnityEngine;
-using UnityEngine.InputSystem; 
+using UnityEngine.InputSystem;
 
 public class HandCursorController : MonoBehaviour
 {
     [Header("Componentes")]
     [SerializeField] private Animator handAnimator;
-    [SerializeField] private Vector2 offset = new Vector2(0, -20f);
+    [SerializeField] private Canvas parentCanvas;
 
     private RectTransform rectTransform;
 
@@ -14,29 +14,36 @@ public class HandCursorController : MonoBehaviour
         rectTransform = GetComponent<RectTransform>();
         if (handAnimator == null) handAnimator = GetComponent<Animator>();
 
-        
+        if (parentCanvas == null)
+        {
+            parentCanvas = GetComponentInParent<Canvas>();
+        }
+
         Cursor.visible = false;
     }
 
     private void Update()
     {
-        
-        if (Mouse.current != null)
+        if (Mouse.current != null && parentCanvas != null)
         {
-            Vector2 mousePos = Mouse.current.position.ReadValue();
-            rectTransform.position = mousePos + offset;
+            Vector2 mouseScreenPos = Mouse.current.position.ReadValue();
+            
+            
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                parentCanvas.transform as RectTransform,
+                mouseScreenPos,
+                parentCanvas.worldCamera,
+                out Vector2 localPoint
+            );
+
+            rectTransform.anchoredPosition = localPoint;
 
             
             bool isPressing = Mouse.current.leftButton.isPressed;
-            SetGrabbing(isPressing);
-        }
-    }
-
-    public void SetGrabbing(bool isGrabbing)
-    {
-        if (handAnimator != null)
-        {
-            handAnimator.SetBool("isGrabbing", isGrabbing);
+            if (handAnimator != null)
+            {
+                handAnimator.SetBool("isGrabbing", isPressing);
+            }
         }
     }
 

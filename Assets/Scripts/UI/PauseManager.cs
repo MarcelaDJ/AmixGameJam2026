@@ -1,53 +1,52 @@
 using UnityEngine;
-using UnityEngine.InputSystem; 
+using UnityEngine.InputSystem;
 
 public class PauseManager : MonoBehaviour
 {
-    [Header("UI References")]
-    [SerializeField] private GameObject pauseMenuUI;
-
-    public static bool IsPaused { get; private set; } = false;
-
-    private void Start()
-    {
-        Resume();
-    }
+    [SerializeField] private GameObject pauseMenuPanel;
+    private bool isPaused = false;
 
     private void Update()
     {
-       
+        
         if (Keyboard.current != null && Keyboard.current.pKey.wasPressedThisFrame)
         {
-            if (IsPaused)
+            if (isPaused)
             {
-                Resume();
+                ResumeGame();
             }
             else
             {
-                Pause();
+                PauseGame();
             }
         }
     }
 
-    public void Resume()
+    public void PauseGame()
     {
-        if (pauseMenuUI != null)
-        {
-            pauseMenuUI.SetActive(false);
-        }
+        isPaused = true;
+        Time.timeScale = 0f; 
+
         
-        Time.timeScale = 1f;
-        IsPaused = false;
+        AudioListener.pause = true;
+
+        if (pauseMenuPanel != null)
+        {
+            pauseMenuPanel.SetActive(true);
+        }
     }
 
-    public void Pause()
+    public void ResumeGame()
     {
-        if (pauseMenuUI != null)
-        {
-            pauseMenuUI.SetActive(true);
-        }
+        isPaused = false;
+        Time.timeScale = 1f; 
 
-        Time.timeScale = 0f;
-        IsPaused = true;
+        
+        AudioListener.pause = false;
+
+        if (pauseMenuPanel != null)
+        {
+            pauseMenuPanel.SetActive(false);
+        }
     }
 }
