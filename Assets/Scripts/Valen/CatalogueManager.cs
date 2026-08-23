@@ -23,7 +23,11 @@ public class CatalogueManager : MonoBehaviour
         
         if (stickerInventoryPanel != null) stickerInventoryPanel.SetActive(true);
 
-        
+        if (ScoreManager.Instance != null)
+        {
+            ScoreManager.Instance.SetCurrentGame(selectedGame);
+        }
+
         if (stickerManager != null)
         {
             
