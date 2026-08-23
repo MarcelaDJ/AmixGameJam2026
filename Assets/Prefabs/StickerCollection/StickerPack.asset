@@ -49,3 +49,7 @@ MonoBehaviour:
     weight: 27.9
   - sticker: {fileID: 11400000, guid: db1c568d9cbe77543a4c01ffcaa7c146, type: 2}
     weight: 3.4
+  - sticker: {fileID: 11400000, guid: fe9ceafe9f8320b4a998ba1c7bd16ab2, type: 2}
+    weight: 2
+  - sticker: {fileID: 11400000, guid: 154ca1ca25776cb45adf1ae727bdf28d, type: 2}
+    weight: 13.4

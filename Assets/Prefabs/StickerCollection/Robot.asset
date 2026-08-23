@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08534ec04c9231a41b75daa3d9eec30f, type: 3}
   m_Name: Robot
   m_EditorClassIdentifier: Assembly-CSharp::StickerData
-  stickerId: 15
+  stickerId: 16
   displayName: Robot
   icon: {fileID: 21300000, guid: 3bf52c607f145b446b5aa60f388b7f7e, type: 3}
   points: 1
