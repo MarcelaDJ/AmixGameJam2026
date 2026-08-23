@@ -16,4 +16,4 @@ MonoBehaviour:
   displayName: Escopeta
   icon: {fileID: 21300000, guid: 5647ff69359975e40a3d641b72e4ad74, type: 3}
   points: 1
-  categories: -1
+  categories: 21
