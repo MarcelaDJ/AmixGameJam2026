@@ -22,6 +22,8 @@ public class PlacedStickerUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         if (canvasGroup == null) canvasGroup = gameObject.AddComponent<CanvasGroup>();
+
+        gameObject.tag = "Sticker";
     }
 
     /// <summary>Configura este sticker visual con sus datos y dependencias.</summary>
