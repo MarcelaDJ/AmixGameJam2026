@@ -17,8 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/03_GameOver.unity
     guid: 418cc70c0906e9c4aac2dfb6bbcae2e5
-  - enabled: 1
-    path: Assets/Scenes/04_Winner.unity
+  - enabled: 0
+    path: Assets/Scenes/ValenTest.unity
     guid: 2688a3f4333549e449900d9ca5b80bb9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
