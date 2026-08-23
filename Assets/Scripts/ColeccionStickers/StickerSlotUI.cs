@@ -24,6 +24,7 @@ public class StickerSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         if (button != null)
             button.onClick.AddListener(HandleClick);
+        gameObject.tag = "Sticker";
     }
 
     /// Configura las referencias de escena necesarias para poder arrastrar
