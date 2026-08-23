@@ -27,6 +27,7 @@ public class StickerDragGhost : MonoBehaviour
         var go = new GameObject("StickerDragGhost", typeof(RectTransform), typeof(Image), typeof(CanvasGroup));
         go.transform.SetParent(canvasRoot, worldPositionStays: false);
         go.transform.SetAsLastSibling();
+        go.tag = "Sticker";
 
         var image = go.GetComponent<Image>();
         image.sprite = icon;
