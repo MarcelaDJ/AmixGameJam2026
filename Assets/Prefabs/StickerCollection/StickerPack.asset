@@ -14,4 +14,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StickerPack
   packName: 'Test '
   stickersPerPack: 5
-  possibleStickers: []
+  possibleStickers:
+  - sticker: {fileID: 11400000, guid: 7a1c315b170e0574083ad062bb871705, type: 2}
+    weight: 18.1
+  - sticker: {fileID: 11400000, guid: 5d40491d88aed6842a958e5f467a5735, type: 2}
+    weight: 16.2
+  - sticker: {fileID: 11400000, guid: 765bfc1cb9df3334fb347b88fb4a607a, type: 2}
+    weight: 4.3
+  - sticker: {fileID: 11400000, guid: 9a15761f9fd55bd46a675e936e8246f7, type: 2}
+    weight: 4.3
+  - sticker: {fileID: 11400000, guid: a13efd9f2b4f8ee4fb8349eeeb78be81, type: 2}
+    weight: 3.4
+  - sticker: {fileID: 11400000, guid: 3431c8bd6b4f93e4e8427489d8869df4, type: 2}
+    weight: 3.4
+  - sticker: {fileID: 11400000, guid: 3fbd4747b19d0234bb7638ea5c3357bb, type: 2}
+    weight: 3.4
+  - sticker: {fileID: 11400000, guid: cc9dc62563266204d88636585b35433e, type: 2}
+    weight: 3.4
+  - sticker: {fileID: 11400000, guid: a847e28a9e822ff4ab4965976bd4b08f, type: 2}
+    weight: 3.4
+  - sticker: {fileID: 11400000, guid: 2c678e6c1aab27b4aa9fa85838a38bc0, type: 2}
+    weight: 3.4
+  - sticker: {fileID: 11400000, guid: ef306dc659c057c4eab16c7c55a2ec26, type: 2}
+    weight: 3.4
+  - sticker: {fileID: 11400000, guid: c93b0e724f02927459700fbac4627141, type: 2}
+    weight: 3.4
+  - sticker: {fileID: 11400000, guid: 978696216e769764084ef49d6636c532, type: 2}
+    weight: 3.4
+  - sticker: {fileID: 11400000, guid: c4bc14bd8330f3b4da822cfee3208c98, type: 2}
+    weight: 3.4
+  - sticker: {fileID: 11400000, guid: cb8d4bb836a042b468248a46a856a464, type: 2}
+    weight: 3.4
+  - sticker: {fileID: 11400000, guid: 8fb0bffed32a14b468907cf15f5894aa, type: 2}
+    weight: 27.9
+  - sticker: {fileID: 11400000, guid: db1c568d9cbe77543a4c01ffcaa7c146, type: 2}
+    weight: 3.4
