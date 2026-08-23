@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a98e9a6e33e27864e897cf721a71ebca
+guid: 11b498c751adb51489e2ea227e1bafbb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,133 +123,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mano-idle-sprite-sheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2000
-        width: 2000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d3a8472664ccb24b941889c9383fd8f
-      internalID: -395378569
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mano-idle-sprite-sheet_1
-      rect:
-        serializedVersion: 2
-        x: 2000
-        y: 2000
-        width: 2000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a650a929bbed6a94a94321e51b69dbfd
-      internalID: -584418910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mano-idle-sprite-sheet_2
-      rect:
-        serializedVersion: 2
-        x: 4000
-        y: 2000
-        width: 2000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8829549eb535eab4d8a0af4a903f28fe
-      internalID: -1159970469
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mano-idle-sprite-sheet_3
+      name: mano-transicion-de-apuntar-a-agarrar_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 2000
         height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.54751563, y: 0.8424844}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46b3a4ec05a44e441a0bad5fbe710849
-      internalID: -954406726
+      spriteID: 431312226e07e38458c46ab2b54f7b29
+      internalID: -60947320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mano-idle-sprite-sheet_4
+      name: mano-transicion-de-apuntar-a-agarrar_1
       rect:
         serializedVersion: 2
-        x: 2000
+        x: 2012
         y: 0
         width: 2000
         height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.58496886, y: 0.7987891}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 422b499374bea2c4c8f40fa8bfe7baa3
-      internalID: -1423999420
+      spriteID: 8900396484b91ef4e8e3b1e33fcee575
+      internalID: 492409941
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mano-idle-sprite-sheet_5
+      name: mano-transicion-de-apuntar-a-agarrar_2
       rect:
         serializedVersion: 2
         x: 4000
         y: 0
         width: 2000
         height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.6036956, y: 0.63024974}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecb86f6c0aac8a24492be90143bb7ce4
-      internalID: 408084726
+      spriteID: 774190b37aae7ab49b922534e9c410f2
+      internalID: 466555359
       vertices: []
       indices: 
       edges: []
@@ -258,7 +192,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 39fa66a0466734b458298a6960808df8
+    spriteID: 19b0edb0c8d5ea04fa329e0a36d78f1e
     internalID: 0
     vertices: []
     indices: 
@@ -268,14 +202,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":2.0},"gridSpriteSize":{"x":2000.0,"y":2000.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":1.0},"gridSpriteSize":{"x":2000.0,"y":2000.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      mano-idle-sprite-sheet_0: -395378569
-      mano-idle-sprite-sheet_1: -584418910
-      mano-idle-sprite-sheet_2: -1159970469
-      mano-idle-sprite-sheet_3: -954406726
-      mano-idle-sprite-sheet_4: -1423999420
-      mano-idle-sprite-sheet_5: 408084726
+      mano-transicion-de-apuntar-a-agarrar_0: -60947320
+      mano-transicion-de-apuntar-a-agarrar_1: 492409941
+      mano-transicion-de-apuntar-a-agarrar_2: 466555359
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

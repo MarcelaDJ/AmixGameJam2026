@@ -1145,8 +1145,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Play
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 62d83a5ffc6364644921d0b869243268, type: 2}
+  m_sharedMaterial: {fileID: -4792005196260695427, guid: 62d83a5ffc6364644921d0b869243268, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1350,6 +1350,87 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &1678634131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1678634133}
+  - component: {fileID: 1678634132}
+  m_Layer: 0
+  m_Name: CursorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1678634132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678634131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09ba1ef4bb48825449b12d7e9890259b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MultiCursorUIHandler
+  defaultAnimation:
+    name: Idle
+    cursorFrames:
+    - {fileID: -395378569, guid: a98e9a6e33e27864e897cf721a71ebca, type: 3}
+    - {fileID: -584418910, guid: a98e9a6e33e27864e897cf721a71ebca, type: 3}
+    - {fileID: -1159970469, guid: a98e9a6e33e27864e897cf721a71ebca, type: 3}
+    - {fileID: -954406726, guid: a98e9a6e33e27864e897cf721a71ebca, type: 3}
+    - {fileID: -1423999420, guid: a98e9a6e33e27864e897cf721a71ebca, type: 3}
+    - {fileID: 408084726, guid: a98e9a6e33e27864e897cf721a71ebca, type: 3}
+    frameRate: 0.1
+    cursorScale: 1.5
+    hotSpot: {x: 0, y: 0}
+    objectTags: []
+    cachedTextures: []
+  customAnimations:
+  - name: Puntero
+    cursorFrames:
+    - {fileID: 165047902, guid: b63f1b0e45932034882e3e0314c1bb7d, type: 3}
+    - {fileID: -283781584, guid: b63f1b0e45932034882e3e0314c1bb7d, type: 3}
+    - {fileID: -1088703903, guid: b63f1b0e45932034882e3e0314c1bb7d, type: 3}
+    frameRate: 0
+    cursorScale: 1.5
+    hotSpot: {x: 0, y: 0}
+    objectTags:
+    - Button
+    cachedTextures: []
+  - name: Agarrar Sticker
+    cursorFrames:
+    - {fileID: -60947320, guid: 11b498c751adb51489e2ea227e1bafbb, type: 3}
+    - {fileID: 492409941, guid: 11b498c751adb51489e2ea227e1bafbb, type: 3}
+    - {fileID: 466555359, guid: 11b498c751adb51489e2ea227e1bafbb, type: 3}
+    frameRate: 0
+    cursorScale: 1.5
+    hotSpot: {x: 0, y: 0}
+    objectTags:
+    - Sticker
+    cachedTextures: []
+--- !u!4 &1678634133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678634131}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1001.40625, y: 454.3355, z: -665.41394}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1899544533
 GameObject:
   m_ObjectHideFlags: 0
@@ -1386,7 +1467,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00018164, y: -273}
+  m_AnchoredPosition: {x: 726, y: -307}
   m_SizeDelta: {x: 298.15, y: 87.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1899544535
@@ -1519,7 +1600,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00009082, y: -417}
+  m_AnchoredPosition: {x: 695, y: -437}
   m_SizeDelta: {x: 298.15, y: 87.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1981314428
@@ -1630,7 +1711,7 @@ GameObject:
   - component: {fileID: 2056344039}
   m_Layer: 5
   m_Name: PlayButton
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1652,7 +1733,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -118.17002}
+  m_AnchoredPosition: {x: 0, y: -284.99997}
   m_SizeDelta: {x: 298.15, y: 87.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2056344039
@@ -1816,4 +1897,5 @@ SceneRoots:
   - {fileID: 1322745293}
   - {fileID: 363047662}
   - {fileID: 213528728}
+  - {fileID: 1678634133}
   - {fileID: 4136391278459320123}

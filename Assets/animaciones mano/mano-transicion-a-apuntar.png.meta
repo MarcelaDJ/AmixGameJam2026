@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a98e9a6e33e27864e897cf721a71ebca
+guid: 67e7cd32e130943438fda7302529cd75
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -21,7 +21,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -107,6 +107,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -123,73 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mano-idle-sprite-sheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2000
-        width: 2000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d3a8472664ccb24b941889c9383fd8f
-      internalID: -395378569
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mano-idle-sprite-sheet_1
-      rect:
-        serializedVersion: 2
-        x: 2000
-        y: 2000
-        width: 2000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a650a929bbed6a94a94321e51b69dbfd
-      internalID: -584418910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mano-idle-sprite-sheet_2
-      rect:
-        serializedVersion: 2
-        x: 4000
-        y: 2000
-        width: 2000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8829549eb535eab4d8a0af4a903f28fe
-      internalID: -1159970469
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mano-idle-sprite-sheet_3
+      name: mano-transicion-a-apuntar_0
       rect:
         serializedVersion: 2
         x: 0
@@ -204,52 +151,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46b3a4ec05a44e441a0bad5fbe710849
-      internalID: -954406726
+      spriteID: dbc1436f104733640954b7762ccc3ece
+      internalID: -1669241014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mano-idle-sprite-sheet_4
+      name: mano-transicion-a-apuntar_1
       rect:
         serializedVersion: 2
         x: 2000
         y: 0
         width: 2000
         height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.56, y: 0.83}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 422b499374bea2c4c8f40fa8bfe7baa3
-      internalID: -1423999420
+      spriteID: 357be571425187642ae4c983aeb328cb
+      internalID: -1552120517
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mano-idle-sprite-sheet_5
+      name: mano-transicion-a-apuntar_2
       rect:
         serializedVersion: 2
         x: 4000
         y: 0
         width: 2000
         height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.56, y: 0.83}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecb86f6c0aac8a24492be90143bb7ce4
-      internalID: 408084726
+      spriteID: f052440ce8abda8469cce540fbafa0f2
+      internalID: 1041144140
       vertices: []
       indices: 
       edges: []
@@ -258,7 +205,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 39fa66a0466734b458298a6960808df8
+    spriteID: b9a39c99ccd7c86488182ed117384644
     internalID: 0
     vertices: []
     indices: 
@@ -266,16 +213,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":2.0},"gridSpriteSize":{"x":2000.0,"y":2000.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      mano-idle-sprite-sheet_0: -395378569
-      mano-idle-sprite-sheet_1: -584418910
-      mano-idle-sprite-sheet_2: -1159970469
-      mano-idle-sprite-sheet_3: -954406726
-      mano-idle-sprite-sheet_4: -1423999420
-      mano-idle-sprite-sheet_5: 408084726
+      mano-transicion-a-apuntar_0: -1669241014
+      mano-transicion-a-apuntar_1: -1552120517
+      mano-transicion-a-apuntar_2: 1041144140
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
