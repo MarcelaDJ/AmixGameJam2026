@@ -11,13 +11,14 @@ public class StickerPackOpener : MonoBehaviour
     [Tooltip("Referencia al manager de la colección del jugador")]
     public StickerCollectionManager collectionManager;
 
-    [Header("Prueba rápida en el Inspector")]
-    [SerializeField] private StickerPack testPack;
+    [Header("Sobre a abrir")]
+    [Tooltip("El sobre que se abre al tocar el botón de UI (o desde el menú contextual de prueba)")]
+    [SerializeField] private StickerPack defaultPack;
 
     /// Abre un sobre: sortea 'stickersPerPack' stickers según su probabilidad
     /// y los agrega a la colección. Devuelve la lista de resultados, útil
     /// para mostrar una animación de "revelado" en la UI.
-  
+
     public List<StickerData> OpenPack(StickerPack pack)
     {
         var results = new List<StickerData>();
@@ -37,6 +38,22 @@ public class StickerPackOpener : MonoBehaviour
 
         return results;
     }
+
+    /// Versión sin parámetros, pensada para conectar directo al OnClick
+    /// de un botón de UI: abre el sobre asignado en 'Default Pack'.
+   
+    public void OpenDefaultPack()
+    {
+        if (defaultPack == null)
+        {
+            Debug.LogWarning("Asigná un StickerPack en 'Default Pack' antes de usar el botón.");
+            return;
+        }
+
+        var obtenidos = OpenPack(defaultPack);
+        Debug.Log("Sobre abierto, stickers obtenidos: " + string.Join(", ", obtenidos.Select(s => s.displayName)));
+    }
+
 
     /// Sortea un sticker respetando los pesos (weight) de cada entrada.
     private StickerData PickWeightedRandom(List<StickerPackEntry> entries)
@@ -60,13 +77,6 @@ public class StickerPackOpener : MonoBehaviour
     [ContextMenu("Abrir sobre de prueba")]
     private void AbrirSobreDePruebaDesdeInspector()
     {
-        if (testPack == null)
-        {
-            Debug.LogWarning("Asigná un StickerPack en 'Test Pack' antes de probar.");
-            return;
-        }
-
-        var obtenidos = OpenPack(testPack);
-        Debug.Log("Sobre abierto, stickers obtenidos: " + string.Join(", ", obtenidos.Select(s => s.displayName)));
+        OpenDefaultPack();
     }
 }
