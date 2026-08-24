@@ -20,6 +20,7 @@ public class StickerSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private System.Action<StickerSlot> onClicked;
     private StickerDragGhost activeGhost;
     private System.Action onPickedUp; // se llama al levantar el sticker con doble clic (para cerrar el álbum)
+  
 
     private void Awake()
     {
@@ -48,14 +49,14 @@ public class StickerSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         boundSlot = slot;
         onClicked = onClickedCallback;
 
-        bool isEmpty = slot == null || slot.IsEmpty;
+        bool hasAvailable = slot != null && !slot.IsEmpty && slot.count > 0;
 
-        iconImage.enabled = !isEmpty;
-        iconImage.sprite = isEmpty ? null : slot.data.icon;
+        iconImage.enabled = hasAvailable;
+        iconImage.sprite = hasAvailable ? slot.data.icon : null;
 
         if (countText != null)
         {
-            bool showCount = !isEmpty && slot.count > 1;
+            bool showCount = hasAvailable && slot.count > 1;
             countText.enabled = showCount;
             countText.text = showCount ? $"x{slot.count}" : string.Empty;
         }
@@ -63,7 +64,6 @@ public class StickerSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     private void HandleClick()
     {
-        Debug.Log("Click detectado en el slot");
         if (boundSlot == null || boundSlot.IsEmpty) return;
         onClicked?.Invoke(boundSlot);
     }
