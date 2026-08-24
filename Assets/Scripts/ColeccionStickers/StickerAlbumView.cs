@@ -30,11 +30,21 @@ public class StickerAlbumView : MonoBehaviour
     [SerializeField] private Transform slotContainer;
     [SerializeField] private StickerSlotUI slotPrefab;
 
+    [Header("Cierre del álbum al levantar un sticker (doble clic)")]
+    [Tooltip("El panel del libro/álbum que se oculta al levantar un sticker, igual que el catálogo de juegos")]
+    [SerializeField] private GameObject albumPanel;
+
     [Header("Configuración de paginación")]
     [SerializeField] private int slotsPerPage = 9;
 
     [Header("Pestañas de página (una por cada fondo distinto)")]
     [SerializeField] private List<AlbumPageTab> pageTabs = new List<AlbumPageTab>();
+
+
+    [Header("Referencias para arrastrar hacia la hoja")]
+    [SerializeField] private StickerBoard stickerBoard;
+    [SerializeField] private RectTransform sheetRect;
+    [SerializeField] private Transform dragCanvasRoot;
 
     private readonly List<StickerSlotUI> spawnedSlots = new List<StickerSlotUI>();
     private int currentPage = 0;
@@ -74,6 +84,7 @@ public class StickerAlbumView : MonoBehaviour
         for (int i = 0; i < slotsPerPage; i++)
         {
             var slotUI = Instantiate(slotPrefab, slotContainer);
+            slotUI.ConfigureBoardReferences(stickerBoard, sheetRect, dragCanvasRoot, CloseAlbum);
             spawnedSlots.Add(slotUI);
         }
     }
@@ -135,5 +146,12 @@ public class StickerAlbumView : MonoBehaviour
     private void HandleSlotClicked(StickerSlot slot)
     {
         zoomView.Show(slot.data);
+    }
+
+    /// <summary>Cierra el panel del álbum, igual que el catálogo se cierra al elegir un juego.</summary>
+    private void CloseAlbum()
+    {
+        if (albumPanel != null)
+            albumPanel.SetActive(false);
     }
 }
