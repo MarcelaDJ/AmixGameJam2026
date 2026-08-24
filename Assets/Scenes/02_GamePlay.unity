@@ -291,6 +291,7 @@ GameObject:
   - component: {fileID: 42689064}
   - component: {fileID: 42689063}
   - component: {fileID: 42689062}
+  - component: {fileID: 42689065}
   m_Layer: 5
   m_Name: GameCard (1)
   m_TagString: Button
@@ -400,6 +401,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42689060}
   m_CullTransparentMesh: 1
+--- !u!114 &42689065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42689060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870244e895c09c54cbed1366da4af164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEntryUI
+  gameIcon: {fileID: 0}
+  titleText: {fileID: 1095685180}
+  selectButton: {fileID: 42689062}
 --- !u!1 &53935747
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,6 +917,7 @@ GameObject:
   - component: {fileID: 279651742}
   - component: {fileID: 279651741}
   - component: {fileID: 279651740}
+  - component: {fileID: 279651743}
   m_Layer: 5
   m_Name: GameCard
   m_TagString: Button
@@ -1010,6 +1027,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279651738}
   m_CullTransparentMesh: 1
+--- !u!114 &279651743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279651738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870244e895c09c54cbed1366da4af164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEntryUI
+  gameIcon: {fileID: 0}
+  titleText: {fileID: 1211267440}
+  selectButton: {fileID: 279651740}
 --- !u!1 &304145360
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,6 +1054,7 @@ GameObject:
   - component: {fileID: 304145364}
   - component: {fileID: 304145363}
   - component: {fileID: 304145362}
+  - component: {fileID: 304145365}
   m_Layer: 5
   m_Name: GameCard (5)
   m_TagString: Button
@@ -1131,6 +1164,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304145360}
   m_CullTransparentMesh: 1
+--- !u!114 &304145365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304145360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870244e895c09c54cbed1366da4af164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEntryUI
+  gameIcon: {fileID: 0}
+  titleText: {fileID: 809977263}
+  selectButton: {fileID: 304145362}
 --- !u!1 &360973531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,6 +1714,7 @@ GameObject:
   - component: {fileID: 617970326}
   - component: {fileID: 617970325}
   - component: {fileID: 617970324}
+  - component: {fileID: 617970327}
   m_Layer: 5
   m_Name: GameCard (8)
   m_TagString: Button
@@ -1775,6 +1824,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 617970322}
   m_CullTransparentMesh: 1
+--- !u!114 &617970327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617970322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870244e895c09c54cbed1366da4af164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEntryUI
+  gameIcon: {fileID: 0}
+  titleText: {fileID: 1936443173}
+  selectButton: {fileID: 617970324}
 --- !u!1 &670289073
 GameObject:
   m_ObjectHideFlags: 0
@@ -2560,7 +2624,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &863308730
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3027,6 +3091,7 @@ GameObject:
   - component: {fileID: 955631442}
   - component: {fileID: 955631441}
   - component: {fileID: 955631440}
+  - component: {fileID: 955631443}
   m_Layer: 5
   m_Name: GameCard (9)
   m_TagString: Button
@@ -3136,6 +3201,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 955631438}
   m_CullTransparentMesh: 1
+--- !u!114 &955631443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955631438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870244e895c09c54cbed1366da4af164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEntryUI
+  gameIcon: {fileID: 0}
+  titleText: {fileID: 424205907}
+  selectButton: {fileID: 955631440}
 --- !u!1 &970630214
 GameObject:
   m_ObjectHideFlags: 0
@@ -4489,6 +4569,7 @@ GameObject:
   - component: {fileID: 1306698858}
   - component: {fileID: 1306698857}
   - component: {fileID: 1306698856}
+  - component: {fileID: 1306698859}
   m_Layer: 5
   m_Name: GameCard (2)
   m_TagString: Button
@@ -4598,6 +4679,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1306698854}
   m_CullTransparentMesh: 1
+--- !u!114 &1306698859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306698854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870244e895c09c54cbed1366da4af164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEntryUI
+  gameIcon: {fileID: 0}
+  titleText: {fileID: 1232101477}
+  selectButton: {fileID: 1306698856}
 --- !u!1 &1327011499
 GameObject:
   m_ObjectHideFlags: 0
@@ -4610,6 +4706,7 @@ GameObject:
   - component: {fileID: 1327011503}
   - component: {fileID: 1327011502}
   - component: {fileID: 1327011501}
+  - component: {fileID: 1327011504}
   m_Layer: 5
   m_Name: GameCard (6)
   m_TagString: Button
@@ -4719,6 +4816,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327011499}
   m_CullTransparentMesh: 1
+--- !u!114 &1327011504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327011499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870244e895c09c54cbed1366da4af164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEntryUI
+  gameIcon: {fileID: 0}
+  titleText: {fileID: 1083602371}
+  selectButton: {fileID: 1327011501}
 --- !u!1 &1329512370
 GameObject:
   m_ObjectHideFlags: 0
@@ -4822,6 +4934,50 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1344474876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1344474878}
+  - component: {fileID: 1344474877}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1344474877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344474876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 890056e38c0c6fc4ba08a34c7f126cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
+--- !u!4 &1344474878
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344474876}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1353115869
 GameObject:
   m_ObjectHideFlags: 0
@@ -5069,6 +5225,74 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1402233626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1402233628}
+  - component: {fileID: 1402233627}
+  m_Layer: 0
+  m_Name: CatalogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1402233627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402233626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90c23665d8a0c694195d71c002cdf9a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CatalogueManager
+  catalogPanel: {fileID: 670289073}
+  stickerInventoryPanel: {fileID: 2135103226}
+  gameCards:
+  - entryUI: {fileID: 279651743}
+    gameData: {fileID: 11400000, guid: 04c33e7e873c4064da2a5e8b8647919b, type: 2}
+  - entryUI: {fileID: 42689065}
+    gameData: {fileID: 11400000, guid: a84ff801df5b0f249b6ed3bd00b6437c, type: 2}
+  - entryUI: {fileID: 0}
+    gameData: {fileID: 0}
+  - entryUI: {fileID: 1306698859}
+    gameData: {fileID: 11400000, guid: ec36a6bd07f70054985e15bae5cccab2, type: 2}
+  - entryUI: {fileID: 1963380772}
+    gameData: {fileID: 11400000, guid: a7d65ca3ca7aed64fa333e695eb5f5f5, type: 2}
+  - entryUI: {fileID: 1783487349}
+    gameData: {fileID: 11400000, guid: fdd20db02f4a6264a9bdc196161b16dd, type: 2}
+  - entryUI: {fileID: 304145365}
+    gameData: {fileID: 11400000, guid: 772a8f4bc32809a459c98df24a650f3b, type: 2}
+  - entryUI: {fileID: 1327011504}
+    gameData: {fileID: 11400000, guid: 51b09afff015e4744bb25c5486618d01, type: 2}
+  - entryUI: {fileID: 1844049285}
+    gameData: {fileID: 11400000, guid: e51d732552c919049a1835aa7cef5c25, type: 2}
+  - entryUI: {fileID: 617970327}
+    gameData: {fileID: 11400000, guid: 1ee16e50ae79250438d5754830356ad0, type: 2}
+  stickerManager: {fileID: 33871405}
+--- !u!4 &1402233628
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402233626}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 149.57268, y: 539.99976, z: -1079.0524}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5577,6 +5801,7 @@ GameObject:
   - component: {fileID: 1783487348}
   - component: {fileID: 1783487347}
   - component: {fileID: 1783487346}
+  - component: {fileID: 1783487349}
   m_Layer: 5
   m_Name: GameCard (4)
   m_TagString: Button
@@ -5686,6 +5911,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1783487344}
   m_CullTransparentMesh: 1
+--- !u!114 &1783487349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783487344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870244e895c09c54cbed1366da4af164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEntryUI
+  gameIcon: {fileID: 0}
+  titleText: {fileID: 1642837034}
+  selectButton: {fileID: 1783487346}
 --- !u!1 &1844049280
 GameObject:
   m_ObjectHideFlags: 0
@@ -5698,6 +5938,7 @@ GameObject:
   - component: {fileID: 1844049284}
   - component: {fileID: 1844049283}
   - component: {fileID: 1844049282}
+  - component: {fileID: 1844049285}
   m_Layer: 5
   m_Name: GameCard (7)
   m_TagString: Button
@@ -5807,6 +6048,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844049280}
   m_CullTransparentMesh: 1
+--- !u!114 &1844049285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844049280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870244e895c09c54cbed1366da4af164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEntryUI
+  gameIcon: {fileID: 0}
+  titleText: {fileID: 2075169297}
+  selectButton: {fileID: 1844049282}
 --- !u!1 &1936443171
 GameObject:
   m_ObjectHideFlags: 0
@@ -6089,6 +6345,7 @@ GameObject:
   - component: {fileID: 1963380771}
   - component: {fileID: 1963380770}
   - component: {fileID: 1963380769}
+  - component: {fileID: 1963380772}
   m_Layer: 5
   m_Name: GameCard (3)
   m_TagString: Button
@@ -6198,6 +6455,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963380767}
   m_CullTransparentMesh: 1
+--- !u!114 &1963380772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963380767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870244e895c09c54cbed1366da4af164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEntryUI
+  gameIcon: {fileID: 0}
+  titleText: {fileID: 1621987771}
+  selectButton: {fileID: 1963380769}
 --- !u!1 &2010460391
 GameObject:
   m_ObjectHideFlags: 0
@@ -6508,3 +6780,5 @@ SceneRoots:
   - {fileID: 833257895}
   - {fileID: 1353115873}
   - {fileID: 1712656434}
+  - {fileID: 1344474878}
+  - {fileID: 1402233628}

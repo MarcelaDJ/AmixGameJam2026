@@ -9,4 +9,8 @@ public class GameDataSO : ScriptableObject
     public GameGenre genre;
     public Sprite icon;
     public bool isUnlocked = false;
+
+    [Header("Categorías que puntúan para este título")]
+    [Tooltip("Un sticker suma punto si comparte al menos una de estas categorías")]
+    public StickerCategory associatedCategories;
 }

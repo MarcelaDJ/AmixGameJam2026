@@ -34,6 +34,11 @@ public class StickerBoard : MonoBehaviour
         var placement = new StickerPlacement(sticker, position, rotation);
         placements.Add(placement);
         OnBoardChanged?.Invoke();
+
+        // Evalúa puntaje: suma un punto si el sticker comparte categoría
+        // con el título de juego actualmente seleccionado.
+        ScoreManager.Instance?.EvaluateStickerPlacement(sticker);
+
         return placement;
     }
 
