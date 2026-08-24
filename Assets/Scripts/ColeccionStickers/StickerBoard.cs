@@ -42,6 +42,23 @@ public class StickerBoard : MonoBehaviour
         return placement;
     }
 
+    /// Coloca un sticker que YA fue reservado antes (ej: al levantarlo con
+    /// doble clic desde el álbum). A diferencia de PlaceSticker, no vuelve
+    /// a reservar — evita descontar dos veces la misma unidad.
+   
+    public StickerPlacement PlaceAlreadyReservedSticker(StickerData sticker, Vector2 position, float rotation = 0f)
+    {
+        if (sticker == null) return null;
+
+        var placement = new StickerPlacement(sticker, position, rotation);
+        placements.Add(placement);
+        OnBoardChanged?.Invoke();
+
+        ScoreManager.Instance?.EvaluateStickerPlacement(sticker);
+
+        return placement;
+    }
+
     /// Removes a placed sticker from the board and returns it to the collection.
     public bool RemoveSticker(StickerPlacement placement)
     {
