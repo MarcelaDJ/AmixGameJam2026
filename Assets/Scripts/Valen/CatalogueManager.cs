@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CatalogueManager : MonoBehaviour
@@ -22,6 +23,8 @@ public class CatalogueManager : MonoBehaviour
 
     [Header("External Managers")]
     [SerializeField] private StickerCollectionManager stickerManager;
+    [Header("Sticker Inventory Header")]
+    [SerializeField] private TextMeshProUGUI selectedGameTitleText;
 
     private void Start()
     {
@@ -50,7 +53,11 @@ public class CatalogueManager : MonoBehaviour
 
     public void OpenStickerInventoryForGame(GameDataSO selectedGame)
     {
-        
+        Debug.Log($"Juego seleccionado: {selectedGame.gameTitle}");
+
+        if (selectedGameTitleText != null)
+            selectedGameTitleText.text = selectedGame.gameTitle;
+
         if (catalogPanel != null) catalogPanel.SetActive(false);
 
         
