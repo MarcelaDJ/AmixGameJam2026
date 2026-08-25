@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 
 /// Maneja el título de juego actualmente seleccionado y el puntaje
@@ -13,6 +14,9 @@ using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
+
+    [Header("Para recortar la captura")]
+    [SerializeField] private RectTransform sheetRectForScreenshot;
     public static ScoreManager Instance { get; private set; }
 
     public GameDataSO CurrentGame { get; private set; }
@@ -94,7 +98,43 @@ public class ScoreManager : MonoBehaviour
     
     public void SubmitAndGoToGameOver(string gameOverSceneName)
     {
-        CapturedScreenshot = ScreenCapture.CaptureScreenshotAsTexture();
+        StartCoroutine(CaptureAndLoad(gameOverSceneName));
+    }
+
+    private IEnumerator CaptureAndLoad(string gameOverSceneName)
+    {
+        yield return new WaitForEndOfFrame();
+
+        Texture2D fullScreenshot = ScreenCapture.CaptureScreenshotAsTexture();
+        CapturedScreenshot = CropToRect(fullScreenshot, sheetRectForScreenshot);
+
         SceneManager.LoadScene(gameOverSceneName);
+    }
+
+    ///Recorta la captura completa al área exacta de un RectTransform 
+    private Texture2D CropToRect(Texture2D source, RectTransform rect)
+    {
+        if (rect == null) return source;
+
+        Vector3[] corners = new Vector3[4];
+        rect.GetWorldCorners(corners); // en Screen Space - Overlay, las coordenadas ya son de pantalla
+
+        float minX = Mathf.Min(corners[0].x, corners[1].x, corners[2].x, corners[3].x);
+        float maxX = Mathf.Max(corners[0].x, corners[1].x, corners[2].x, corners[3].x);
+        float minY = Mathf.Min(corners[0].y, corners[1].y, corners[2].y, corners[3].y);
+        float maxY = Mathf.Max(corners[0].y, corners[1].y, corners[2].y, corners[3].y);
+
+        int x = Mathf.Clamp(Mathf.RoundToInt(minX), 0, source.width - 1);
+        int y = Mathf.Clamp(Mathf.RoundToInt(minY), 0, source.height - 1);
+        int width = Mathf.Clamp(Mathf.RoundToInt(maxX - minX), 1, source.width - x);
+        int height = Mathf.Clamp(Mathf.RoundToInt(maxY - minY), 1, source.height - y);
+
+        Color[] pixels = source.GetPixels(x, y, width, height);
+        var cropped = new Texture2D(width, height, TextureFormat.RGB24, false);
+        cropped.SetPixels(pixels);
+        cropped.Apply();
+
+        Destroy(source); 
+        return cropped;
     }
 }
